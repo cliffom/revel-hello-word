@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/go/src/dev/hello-world
+    command: revel run dev/hello-world
